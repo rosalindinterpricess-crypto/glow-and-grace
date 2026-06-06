@@ -3,135 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>Glow & Grace - Girls Dress Boutique</title>
+    <title>Glow & Grace - Girls Boutique</title>
+    <!-- Tailwind CSS for Beautiful Styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-pink-50 text-gray-800 font-sans">
 
-    <!-- 1. HEADER / NAVIGATION BAR -->
-    <header class="text-gray-600 body-font bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                <span class="ml-3 text-2xl font-bold text-pink-600 tracking-wider">Glow & Grace</span>
-            </a>
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-medium">
-                <a href="#home" class="mr-5 hover:text-pink-600 transition">Home</a>
-                <a href="#collection" class="mr-5 hover:text-pink-600 transition">Collection</a>
-                <a href="#queries-form" class="mr-5 hover:text-pink-600 transition">Contact Us</a>
+    <!-- 1. HEADER & NAVIGATION -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-serif font-bold text-pink-600 tracking-wide">Glow & Grace</h1>
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="text-gray-600 hover:text-pink-600 transition">Home</a>
+                <a href="#collection" class="text-gray-600 hover:text-pink-600 transition">Collection</a>
+                <a href="#contact" class="text-gray-600 hover:text-pink-600 transition">Contact Us</a>
             </nav>
-            <button class="inline-flex items-center bg-pink-600 text-white border-0 py-2 px-4 focus:outline-none hover:bg-pink-700 rounded-full text-base mt-4 md:mt-0 shadow-md transition">
+            <button class="bg-pink-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:bg-pink-700 transition">
                 Cart (0)
             </button>
         </div>
     </header>
 
-    <!-- 2. HERO / WELCOME SECTION -->
-    <section id="home" class="text-gray-600 body-font bg-cover bg-center relative" style="background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200'); height: 70vh;">
-        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col h-full">
-            <div class="text-center lg:w-2/3 w-full">
-                <h1 class="title-font sm:text-5xl text-4xl mb-4 font-extrabold text-gray-900 tracking-tight">
-                    Premium <span class="text-pink-600">Girls Dresses</span> Just For You
-                </h1>
-                <p class="mb-8 leading-relaxed text-lg font-medium text-gray-700">
-                    Explore our latest premium collection of traditional, casual, and party wear dresses. High-quality fabric at affordable prices.
-                </p>
-                <div class="flex justify-center">
-                    <a href="#collection" class="inline-flex text-white bg-pink-600 border-0 py-3 px-8 focus:outline-none hover:bg-pink-700 rounded-full text-lg font-semibold shadow-lg transition transform hover:-translate-y-1">
-                        Shop Collection
-                    </a>
-                </div>
-            </div>
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero-bg h-[500px] flex items-center justify-center text-center text-white px-4">
+        <div>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold mb-4 drop-shadow-lg">Premium Girls Dresses</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto drop-shadow-md">Just For You! Explore our latest premium collection of traditional, casual, and party wear dresses.</p>
+            <a href="#collection" class="bg-white text-pink-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-pink-100 transition text-lg">
+                Shop Collection
+            </a>
         </div>
     </section>
 
-    <!-- 3. PRODUCTS / DRESSES SECTION -->
-    <section id="collection" class="text-gray-600 body-font py-16">
-        <div class="container mx-auto px-5">
-            <div class="flex flex-col text-center w-full mb-12">
-                <h2 class="text-xs text-pink-600 tracking-widest font-medium title-font mb-1 uppercase">Our New Arrivals</h2>
-                <h1 class="sm:text-3xl text-2xl font-bold title-font text-gray-900">Featured Girls Collection</h1>
-            </div>
+    <!-- 3. NEW COLLECTION SECTION (DRESSES) -->
+    <section id="collection" class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-serif font-bold text-gray-900 mb-2">Our Latest Arrivals</h3>
+            <div class="h-1 w-20 bg-pink-600 mx-auto rounded"></div>
+        </div>
 
-            <div class="flex flex-wrap -m-4">
-                <!-- Dress Card 1 -->
-                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="lg:h-80 md:h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?q=80&w=500" alt="Dress 1">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">PARTY WEAR</h2>
-                            <h1 class="title-font text-lg font-bold text-gray-900 mb-3">Elegant Pink Floral Frock</h1>
-                            <p class="leading-relaxed mb-4 text-sm text-gray-600">Premium organza fabric with beautiful embroidery work. Perfect for weddings and birthday parties.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-extrabold text-pink-600">Rs. 3,500</span>
-                                <a href="https://wa.me/923044698678?text=Salam%20Glow%20and%20Grace!%20I%20want%20to%20buy%20the%20Elegant%20Pink%20Floral%20Frock." target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-full text-sm shadow transition">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Dress Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Dress 1: Party Wear Frock -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="h-[400px] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop" 
+                         alt="Premium Party Wear Frock" 
+                         class="w-full h-full object-cover object-top">
                 </div>
-
-                <!-- Dress Card 2 -->
-                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="lg:h-80 md:h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=500" alt="Dress 2">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CASUAL WEAR</h2>
-                            <h1 class="title-font text-lg font-bold text-gray-900 mb-3">Sky Blue Summer Kurti</h1>
-                            <p class="leading-relaxed mb-4 text-sm text-gray-600">Pure breathable lawn cotton kurti with stylish neck design. Ideal for daily casual wear.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-extrabold text-pink-600">Rs. 1,850</span>
-                                <a href="https://wa.me/923044698678?text=Salam%20Glow%20and%20Grace!%20I%20want%20to%20buy%20the%20Sky%20Blue%20Summer%20Kurti." target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-full text-sm shadow transition">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dress Card 3 -->
-                <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
-                    <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                        <img class="lg:h-80 md:h-64 w-full object-cover object-center" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=500" alt="Dress 3">
-                        <div class="p-6">
-                            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">TRADITIONAL</h2>
-                            <h1 class="title-font text-lg font-bold text-gray-900 mb-3">Velvet Embroidered Suit</h1>
-                            <p class="leading-relaxed mb-4 text-sm text-gray-600">Luxurious micro-velvet 3-piece suit with heavy zari tilla work and dupatta.</p>
-                            <div class="flex items-center justify-between">
-                                <span class="text-xl font-extrabold text-pink-600">Rs. 4,999</span>
-                                <a href="https://wa.me/923044698678?text=Salam%20Glow%20and%20Grace!%20I%20want%20to%20buy%20the%20Velvet%20Embroidered%20Suit." target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-4 rounded-full text-sm shadow transition">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="p-6 text-center">
+                    <span class="text-xs font-bold text-pink-500 uppercase tracking-widest">Party Wear</span>
+                    <h4 class="text-xl font-bold text-gray-900 mt-1 mb-2">Designer Anarkali Frock</h4>
+                    <p class="text-pink-600 font-bold text-lg mb-4">Rs. 4,500</p>
+                    <button class="w-full bg-pink-600 text-white py-2.5 rounded-xl font-semibold hover:bg-pink-700 transition">
+                        Add to Cart
+                    </button>
                 </div>
             </div>
+
+            <!-- Dress 2: Summer Kurti -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="h-[400px] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1609357605129-26f69add5d6e?q=80&w=600&auto=format&fit=crop" 
+                         alt="Elegant Summer Kurti" 
+                         class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-6 text-center">
+                    <span class="text-xs font-bold text-pink-500 uppercase tracking-widest">Casual Wear</span>
+                    <h4 class="text-xl font-bold text-gray-900 mt-1 mb-2">Elegant Printed Kurti</h4>
+                    <p class="text-pink-600 font-bold text-lg mb-4">Rs. 2,200</p>
+                    <button class="w-full bg-pink-600 text-white py-2.5 rounded-xl font-semibold hover:bg-pink-700 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dress 3: Velvet Suit -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+                <div class="h-[400px] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop" 
+                         alt="Luxury Velvet Suit" 
+                         class="w-full h-full object-cover object-top">
+                </div>
+                <div class="p-6 text-center">
+                    <span class="text-xs font-bold text-pink-500 uppercase tracking-widest">Luxury Wear</span>
+                    <h4 class="text-xl font-bold text-gray-900 mt-1 mb-2">Premium Velvet Embroidered Suit</h4>
+                    <p class="text-pink-600 font-bold text-lg mb-4">Rs. 6,800</p>
+                    <button class="w-full bg-pink-600 text-white py-2.5 rounded-xl font-semibold hover:bg-pink-700 transition">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- 4. CONTACT FOR QUERIES SECTION -->
-    <section id="queries-form" class="text-gray-600 body-font bg-white py-16 border-t border-gray-100">
-        <div class="container px-5 mx-auto flex flex-col items-center">
-            <div class="lg:w-1/3 md:w-1/2 bg-pink-50 rounded-2xl p-8 flex flex-col w-full shadow-md">
-                <h2 class="text-gray-900 text-2xl font-bold title-font mb-2 text-center">Contact For Queries</h2>
-                <p class="leading-relaxed mb-6 text-gray-600 text-center text-sm">Have questions about size or fabric? Send us a message!</p>
-                <div class="relative mb-4">
-                    <label for="name" class="leading-7 text-sm text-gray-600 font-medium">Your Name</label>
-                    <input type="text" id="name" name="name" class="w-full bg-white rounded-lg border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                </div>
-                <div class="relative mb-4">
-                    <label for="message" class="leading-7 text-sm text-gray-600 font-medium">Your Query</label>
-                    <textarea id="message" name="message" class="w-full bg-white rounded-lg border border-gray-300 focus:border-pink-500 focus:ring-2 focus:ring-pink-200 h-24 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-                </div>
-                <button class="text-white bg-pink-600 border-0 py-2 px-6 focus:outline-none hover:bg-pink-700 rounded-full font-semibold text-lg shadow transition">Submit Query</button>
-            </div>
+    <!-- 4. CONTACT SECTION -->
+    <section id="contact" class="bg-white py-16">
+        <div class="container mx-auto px-6 max-w-md text-center">
+            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Order Via WhatsApp</h3>
+            <p class="text-gray-600 mb-6">Apna order confirm karne ke liye niche button par click karein.</p>
+            <a href="https://wa.me/923000000000" target="_blank" class="inline-block bg-green-500 text-white font-bold px-8 py-3 rounded-full shadow hover:bg-green-600 transition text-lg">
+                💬 Chat on WhatsApp
+            </a>
         </div>
     </section>
 
     <!-- 5. FOOTER -->
-    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
-        <p>&copy; 2026 Glow & Grace Boutique. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-gray-800">
+        <p>&copy; 2026 Glow & Grace Boutique. All Rights Reserved.</p>
     </footer>
 
 </body>
